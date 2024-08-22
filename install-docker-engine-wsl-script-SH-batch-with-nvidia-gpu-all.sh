@@ -85,5 +85,3 @@ sudo docker run --rm --runtime=nvidia --gpus all --privileged ubuntu nvidia-smi
    --device=nvidia.com/gpu=all \
    ubuntu nvidia-smi
 
-
-docker pull bwits/pdf2htmlex
