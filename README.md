@@ -45,7 +45,7 @@ docker volume create hello
 docker run -d -v hello:/world busybox ls /world
 
 # Create Docker volume with specific options
-docker volume create --driver local --opt type=none --opt device=/mnt/c/Users/dvrch/Documents/docker_directory  --opt o=bind docker_directory
+docker volume create --driver local --opt type=none --opt device=/mnt/c/Users/username/Documents/docker_directory  --opt o=bind docker_directory
 
 # Install Nvidia container toolkit
 curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | sudo gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg \
@@ -80,7 +80,7 @@ sudo nvidia-ctk runtime configure --runtime=crio
 sudo systemctl restart crio
 
 # Create Docker volume with specific options again
-docker volume create --driver local --opt type=none --opt device=/mnt/c/Users/dvrch/Documents/docker_directory  --opt o=bind docker_directory
+docker volume create --driver local --opt type=none --opt device=/mnt/c/Users/username/Documents/docker_directory  --opt o=bind docker_directory
 
 # test Nvidia container toolkit
 sudo docker run --rm --runtime=nvidia --gpus all --privileged ubuntu nvidia-smi
@@ -89,8 +89,6 @@ sudo docker run --rm --runtime=nvidia --gpus all --privileged ubuntu nvidia-smi
    --device=nvidia.com/gpu=all \
    ubuntu nvidia-smi
 
-
-docker pull bwits/pdf2htmlex
 
 
 ````
